@@ -1,0 +1,17 @@
+{
+  "name": "bootcamp_frontend",
+  "version": "1.0.1",
+  "description": "TEst Project for Bootcamp2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "parcel index.html"
+  },
+  "keywords": [
+    "Js"
+  ],
+  "author": "Ryan",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
