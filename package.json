@@ -4,7 +4,8 @@
   "description": "TEst Project for Bootcamp2021",
   "main": "index.js",
   "scripts": {
-    "test": "parcel index.html"
+    "dev": "parcel index.html",
+    "build":"parcel build index.html --out-dir docs --public-url ."
   },
   "keywords": [
     "Js"
