@@ -1,7 +1,28 @@
+.Card{
+    box-shadow: 5px 1px 5px grey;
+    padding:4px;
+    margin:5px;
+}
+
 .container{
-    width: 15em;
+    padding: 10px;
+
+    /*width: 15em;
     border: 1px solid rgb(82, 51, 51);
     box-shadow: 8px 8px 5px rgb(206, 201, 201);
     padding: 8px 12px;
     background-image: linear-gradient(180deg, #fff,rgb(238, 138, 138))
+    */
+}
+.headline{
+    text-align: center;
+} 
+
+.pID{
+    color: green;
+}
+
+#c_2{
+    color:blue;
+    /*background:blue; */
 }

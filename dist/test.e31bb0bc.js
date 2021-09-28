@@ -11218,19 +11218,24 @@ var jquery = require('jquery'); //
 
 $ = window.$ = window.jQuery = jquery;
 $(function () {
-  var endpoint = 'https://jsonplaceholder.typicode.com/todos/1';
+  var endpoint = 'https://jsonplaceholder.typicode.com/todos';
   $.ajax({
     url: endpoint,
     contentType: "application/json",
     dataType: 'json',
     success: function success(result) {
-      console.log(result);
-      var id = document.getElementById("todoID");
-      var title = document.getElementById("todoTitle");
-      var isCompleted = document.getElementById("isC");
-      id.innerHTML = 'ID: ' + result.id;
-      title.innerHTML = 'Title: ' + result.title;
-      isCompleted.innerHTML = 'is Completed: ' + result.completed;
+      result.forEach(function (el) {
+        $(".container").append("\n            \n                <div class=\"Card\" id=\"c_".concat(el.id, "\">\n\n                    <p class=\"pID\" id=\"").concat(el.id, "\"> ").concat(el.id, "</p>\n                    <p class=\"pTitle\" id=\"").concat(el.id, "\"> ").concat(el.title, "</p>\n                    <p class=\"pCompleted\" id=\"").concat(el.id, "\"> ").concat(el.completed, "</p>\n                </div>\n\n                "));
+      });
+      /*
+      console.log(result)
+      var id=document.getElementById("todoID")
+      var title=document.getElementById("todoTitle")
+      var isCompleted=document.getElementById("isC")
+      id.innerHTML='ID: '+result.id
+      title.innerHTML='Title: '+result.title
+      isCompleted.innerHTML='is Completed: '+result.completed
+      */
     }
   });
 });
@@ -11262,7 +11267,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53743" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65199" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
